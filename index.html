@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        .social-icons {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .social-icons a {
+            color: #333;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #0077b5; /* LinkedIn blue or change as desired */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mina's Portfolio</h1>
+        <nav>
+            <button onclick="showTab('about')">About</button>
+            <button onclick="showTab('projects')">Projects</button>
+            <button onclick="showTab('contact')">Contact</button>
+        </nav>
+        <!-- 🔗 Social Icons -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/your-link" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://gitlab.com/your-link" target="_blank" title="GitLab">
+                <i class="fab fa-gitlab"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?user=your-id" target="_blank" title="Google Scholar">
+                <i class="fas fa-graduation-cap"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="tab active">
+            <h2>About Me</h2>
+            <p>Write here about your education, research, work experience, courses, skills, and awards.</p>
+        </section>
+
+        <section id="projects" class="tab">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <a href="https://gitlab.com/your_project_url" target="_blank">
+                        <img src="project1.jpg" alt="Project 1 Thumbnail">
+                        <h3>Project Title</h3>
+                        <p>Short description of the project goes here.</p>
+                    </a>
+                </div>
+                <div class="project-item">
+                    <a href="https://gitlab.com/your_project_url" target="_blank">
+                        <img src="project1.jpg" alt="Project 1 Thumbnail">
+                        <h3>Project Title</h3>
+                        <p>Short description of the project goes here.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="tab">
+            <h2>Contact</h2>
+            <p>Email: your.email@example.com</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
