@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mina's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -26,12 +25,22 @@
 </head>
 <body>
     <header>
-        <h1>Mina's Portfolio</h1>
+      <canvas id="bg-graph"></canvas>
+        <div class="header-container">
+            <img src="Profile.jpeg" alt="Profile Photo" class="header-pic">
+            <div class="name-and-quote">
+                <h1 class="site-title">Mina Omrani</h1>
+                <p class="site-quote">“Luck favors a prepared mind!”<br><span class="quote-author">– Louis Pasteur</span></p>
+            </div>
+        </div>
+        
         <nav>
-            <button onclick="showTab('about')">About</button>
+            <button onclick="showTab('about')">About Me</button>
             <button onclick="showTab('projects')">Projects</button>
+            <button onclick="showTab('publications')">Publications</button>
             <button onclick="showTab('contact')">Contact</button>
         </nav>
+        
         <!-- 🔗 Social Icons -->
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/your-link" target="_blank" title="LinkedIn">
@@ -45,37 +54,1149 @@
             </a>
         </div>
     </header>
+    
 
     <main>
-        <section id="about" class="tab active">
-            <h2>About Me</h2>
-            <p>Write here about your education, research, work experience, courses, skills, and awards.</p>
-        </section>
+        <section id="about" class="tab active" aria-labelledby="about-heading">
+  <div class="about-wrap">
+    <!-- <h2 id="about-heading" class="about-title">About Me</h2> -->
 
-        <section id="projects" class="tab">
-            <h2>Projects</h2>
-            <div class="project-list">
-                <div class="project-item">
-                    <a href="https://gitlab.com/your_project_url" target="_blank">
-                        <img src="project1.jpg" alt="Project 1 Thumbnail">
-                        <h3>Project Title</h3>
-                        <p>Short description of the project goes here.</p>
-                    </a>
-                </div>
-                <div class="project-item">
-                    <a href="https://gitlab.com/your_project_url" target="_blank">
-                        <img src="project1.jpg" alt="Project 1 Thumbnail">
-                        <h3>Project Title</h3>
-                        <p>Short description of the project goes here.</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <!-- نوار فهرست داخلی (اختیاری) -->
+    <nav class="about-subnav" aria-label="About sections">
+      <a href="#about-intro">Intro</a>
+      <a href="#about-research">Research</a>
+      <a href="#about-education">Education</a>
+      <a href="#about-work">Work Experience</a>
+      <a href="#about-achievements">Achievements</a>
+      <a href="#about-skills">Skills</a>
+      <a href="#about-courses">Selected Courses</a>
+      <a href="#about-lang-hobby">Languages & Hobbies</a>
+    </nav>
 
+    <!-- 1) معرفی -->
+    <article id="about-intro" class="section-card">
+      <header class="section-head">
+        <h3 class="section-title">A brief intro about me</h3>
+        <span class="title-bar"></span>
+      </header>
+<p>
+I am Mina, a researcher in Computer Science.  
+My master’s studies was  in the field of <strong><em>Algorithms and Theory of Computation</em></strong>, and my bachelor’s degree in <strong><em>Software Engineering </em></strong>.  
+I also have about two years of experience in mobile software development. 
+I am deeply interested in the intersection of <strong><em>Algorithms and Artificial Intelligence</em></strong> and what explaines the behaviour of a model.
+In my free time, I also study <strong><em>Philosophy and Psychology</em></strong>. I am particularly fascinated by the philosophy of mind and self-knowledge, and I believe that the most important project for every human being in this world is the journey of understanding oneself.
+Recently, I am studying and conducting research in the fild of <strong><em>Trustworthy AI </em></strong>.
+    </article>
+
+    <div class="divider"></div>
+
+    <!-- 2) تحقیقات -->
+    <article id="about-research" class="section-card">
+      <header class="section-head">
+  <h3 class="section-title">My research experience</h3>
+  <span class="title-bar"></span>
+</header>
+
+<ol class="timeline">
+  <!-- تجربه ۱ -->
+  <li class="timeline-item">
+    <div class="dot"></div>
+    <div class="content">
+      <div class="edu-row">
+        <strong>Research Assistant / Full-time, Remote</strong>
+        <span class="edu-meta">Jun 2024 – Dec 2024</span>
+      </div>
+      <p><em><a href="http://www.paramathic.com/" target="_blank">Paramathics Lab, University of Toronto</a></em></p>
+      <p class="subtext">Under the supervision of Dr. Maryam Mehri Dehnavi</p>
+      <p><strong>Project:</strong> Program Synthesis and Verification using LLMs to Develop High Performing Compilers</p>
+    </div>
+  </li>
+
+  <!-- تجربه ۲ -->
+  <li class="timeline-item">
+    <div class="dot"></div>
+    <div class="content">
+      <div class="edu-row">
+        <strong>Research Assistant / Full-time</strong>
+        <span class="edu-meta">Jan 2023 – Feb 2024</span>
+      </div>
+     <p><em><a href="https://agmlab.aut.ac.ir/" target="_blank">Agml Lab, Amirkabir University of Technology</a></em></p>
+      <p class="subtext" >Under the supervision of Dr. Zahed Rahmati</p>
+      <p class="project-label"><strong>Projects:</strong></p>
+      <ul class="project-list">
+        <li>Designing an Algorithm for Reverse Nearest Neighbor Queries on Road Networks</li>
+        <li>Designing an Approximation Algorithm for Graph Clustering problem </li>
+      </ul>
+    </div>
+  </li>
+
+  <!-- تجربه ۳ -->
+  <li class="timeline-item">
+    <div class="dot"></div>
+    <div class="content">
+      <div class="edu-row">
+        <strong>Research Assistant / Full-time</strong>
+        <span class="edu-meta">Nov 2020 – Sep 2021</span>
+      </div>
+      <p><em><a href="https://amt.mui.ac.ir/" target="_blank">School of Advanced Technologies in Medicine, Isfahan University</a></em></p>
+      <p class="subtext" >Under the supervision of Prof. Alireza Mehri Dehnavi</p>
+      <p><strong>Project:</strong> Segmentation of Clean and Contaminated Regions in Small-Bowel Capsule Endoscopy Images</p>
+    </div>
+  </li>
+
+  <!-- تجربه ۴ -->
+  <li class="timeline-item">
+    <div class="dot"></div>
+    <div class="content">
+      <div class="edu-row">
+        <strong>Junior Research Assistant / Part-time</strong>
+        <span class="edu-meta">Nov 2018 – Sep 2019</span>
+      </div>
+      <p><em>Isfahan University of Technology</em></p>
+      <p class="subtext" >Under the supervision of Dr. Nader Karimi </p>
+      <p><strong>Project:</strong> Designing Carhorn Detection System for the Deaf using AI</p>
+    </div>
+  </li>
+
+  <!-- تجربه ۵ -->
+  <li class="timeline-item">
+    <div class="dot"></div>
+    <div class="content">
+      <div class="edu-row">
+        <strong>Junior Research Assistant / Full-time</strong>
+        <span class="edu-meta">July 2017 – Oct 2017</span>
+      </div>
+     <p><em><a href="https://ece.iut.ac.ir/en/lab/2129" target="_blank">GTMD Lab, Isfahan University of Technology</a></em></p>
+      <p class="subtext" >Under the supervision of Prof. Mohammad Hossein Manshaei </p>
+      <p class="project-label"><strong>Projects:</strong></p>
+      <ul class="project-list">
+        <li>Resource Sharing System Using Algorithmic Game Theory</li>
+        <li>Game-Theoretic Deception Mechanism for Security Management of Clouds</li>
+      </ul>      
+    </div>
+  </li>
+</ol>
+
+    </article>
+
+    <div class="divider"></div>
+<article id="about-education" class="section-card">
+  <header class="section-head">
+    <h3 class="section-title">Education</h3>
+    <span class="title-bar"></span>
+  </header>
+
+  <ol class="timeline">
+    <!-- M.Sc. -->
+    <li class="timeline-item">
+      <div class="dot"></div>
+      <div class="content">
+        <div class="edu-row">
+          <strong>
+            <img src="images/amirkabir.png" alt="Amirkabir Logo" class="edu-logo aut">
+            Amirkabir University of Technology
+          </strong>
+          <span class="edu-meta">Nov 2021 – Feb 2024</span>
+        </div>
+        <p class="subtext"><em>M.Sc. in Computer Science – Algorithm and Complexity Theory</em></p>
+        <p><strong>GPA:</strong> 3.76/4</p>
+        <p class="edu-project"><strong>Thesis : </strong>Designing an Approximation Algorithm for Graph Clustering  
+          to Solve Reverse Nearest Neighbor Search Problem in Euclidean Network
+        </p>
+      </div>
+    </li>
+
+    <!-- B.Sc. -->
+    <li class="timeline-item">
+      <div class="dot"></div>
+      <div class="content">
+        <div class="edu-row">
+          <strong>
+             <img src="images/iut.svg" alt="IUT Logo" class="edu-logo">
+            Isfahan University of Technology
+          </strong>
+          <span class="edu-meta">Sep 2014 – Sep 2019</span>
+        </div>
+        <p class="subtext"><em>B.Sc. in Computer Software Engineering</em></p>
+        <p><strong>GPA:</strong> 3.25/4 (last 80 units: 3.70/4)</p>
+        <p class="edu-project">
+         <strong>Thesis : </strong> Carhorn Detection System for the Deaf – Optimized an NN model  
+          on a self-collected dataset of 2000 car horn samples, classifying them against other sounds  
+          and achieving a test accuracy of 0.89.  
+          This project was a pre-implementation of a car horn diagnosing wristlet for the Deaf.  
+          <a href="https://drive.google.com/file/d/1cuNyKF6W9PkkP-caJ5i5Z_wN2Z1U11zd/view" target="_blank">Model Code</a> / <a href="https://www.dropbox.com/scl/fo/2ni5h9px6sf48opg752ph/AJaw9vuYI8XPe-Lx_1xZqlY?rlkey=lapahyv2budvxrpon9o1spohu&e=1&st=y34e2j2m&dl=0" target="_blank">Project Video + Micro Code</a>
+        </p>
+      </div>
+    </li>
+  </ol>
+</article>
+
+<article id="about-work" class="section-card">
+  <header class="section-head">
+    <h3 class="section-title">Work Experience</h3>
+    <span class="title-bar"></span>
+  </header>
+
+  <ol class="timeline">
+    <!-- موقعیت ۱ -->
+    <li class="timeline-item">
+      <div class="dot"></div>
+      <div class="content">
+        <div class="edu-row">
+          <strong>Mobile Application Developer</strong>
+          <span class="edu-meta">Jul 2015 – Apr 2017</span>
+        </div>
+        <p class="subtext"><img src="images/Kasra.png" alt="IUT Logo" class="edu-logo"><em>Kasra Company</em>   <a href="https://kasraco.net/en/" target="_blank" title="Kasra Company Website">
+          <i class="fas fa-external-link-alt" style="margin-left:6px; color:#007bff;"></i>
+        </a></p>
+
+
+        <ul class="bulleted-tight">
+          <li>Collaborated with an Agile team of 5 developers to create high-value products.</li>
+          <li>Launched B2B Android and iOS enterprise apps, including <a href="https://apps.apple.com/gb/app/kasra-food/id1612934751" target="_blank"><em>Kasra Food </em></a> and <a href="https://apps.apple.com/us/app/my-kasra/id1663602409" target="_blank"><em>My Kasra </em></a> with 100K+ daily active users (Google Play & App Store).</li>
+          <li>Implemented hybrid apps for Android & iOS using <strong>AngularJS</strong>, <strong>Ionic</strong>, and <strong>Node.js</strong>.</li>
+          <li>In <strong>My Kasra</strong>, I developed modules for attendance monitoring and organizational request management.</li> 
+          <li><strong>Kasra Food</strong> enables meal reservation and payment within organizations.</li>
+        </ul>
+      </div>
+    </li>
+  </ol>
+</article>
+
+
+    <!-- 4) دستاوردها -->
+<article id="about-achievements" class="section-card">
+  <header class="section-head">
+    <h3 class="section-title">Achievements</h3>
+    <span class="title-bar"></span>
+  </header>
+  <ul class="list-vertical achievements-list">
+    <li>
+      <i class="fas fa-graduation-cap" style="color:#4cafef; margin-right:6px;"></i>
+      <strong>Two Fully Funded CS Ph.D. Admissions – UIC & UF (Fall 2025)</strong>  
+      <ul class="bulleted-tight">
+        <li class="subtext">Could not attend due to the Travel Ban rule.</li>
+        <li class="subtext" >Also received a partially funded offer to CE Ph.D. program at Rutgers University.</li>
+      </ul>
+    </li>
+
+   <li>
+      <i class="fas fa-university" style="color:#3f51b5; margin-right:6px;"></i>
+      <strong>Summer Exchange Program – Koç University, Istanbul (Summer 2024)</strong>  
+      <ul class="bulleted-tight">
+        <li class="subtext">Selected and nominated by Amirkabir University of Technology to participate in the summer exchange program.</li>
+      </ul>
+    </li>
+
+
+
+    <li>
+      <i class="fas fa-award" style="color:#ff9800; margin-right:6px;"></i>
+      <strong>National and Fully-Funded Scholarship for M.Sc. Studies (Sep 2021)</strong>  
+      <ul class="bulleted-tight">
+        <li class="subtext" >Placed 61st in the National University Entrance Exam for Computer Science.</li>
+      </ul>
+    </li>
+
+    <li>
+      <i class="fas fa-trophy" style="color:#f44336; margin-right:6px;"></i>
+      <strong>1st place among 70 teams – IEC Challenge (Sep 2019)</strong>  
+      <ul class="bulleted-tight">
+        <li class="subtext" >National Data Mining Challenge, Sharif University of Technology.</li>
+        <li class="subtext" >Award equivalent to $600.</li>
+      </ul>
+    </li>
+
+    <li>
+      <i class="fas fa-laptop-code" style="color:#9c27b0; margin-right:6px;"></i>
+      <strong>4th place among 64 teams – Mobile Programming Marathon (Sep 2017)</strong>  
+      <ul class="bulleted-tight">
+        <li class="subtext" >National mobile programming hackathon, hosted by Sharif University of Technology.</li>
+        <li class="subtext" >Designed & developed a crowdsourcing app within 3 days.</li>
+        <li class="subtext">Pitched and convinced event sponsors to purchase it.</li>
+        <li class="subtext">Top 10 teams were awarded and sponsored.</li>
+      </ul>
+    </li>
+
+    <li>
+       <i class="fas fa-award" style="color:#ff9800; margin-right:6px;"></i>
+      <strong>National and Fully-Funded Scholarship for B.Sc. Studies (Sep 2014)</strong>  
+      <ul class="bulleted-tight">
+        <li class="subtext">Placed among the top 0.5% of 223,400 participants in the Nationwide University Entrance Exam for B.Sc.</li>
+      </ul>
+    </li>
+  </ul>
+</article>
+
+    <div class="divider"></div>
+<!-- <article id="about-skills" class="section-card">
+      <header class="section-head">
+        <h3 class="section-title">Skills</h3>
+        <span class="title-bar"></span>
+      </header> -->
+  <!-- بخش اول -->
+  <!-- <h5>Programming Languages, Libraries & Frameworks</h5>
+  <div class="badges fixed-badges">
+    <li>Python <span class="exp">(4y)</span></li>
+    <li>C++ <span class="exp">(4y)</span></li>
+    <li>NumPy <span class="exp">(3y)</span></li>
+    <li>Pandas <span class="exp">(3y)</span></li>
+    <li>SQL <span class="exp">(3y)</span></li>
+    <li>AngularJS <span class="exp">(3y)</span></li>
+    <li>NodeJS <span class="exp">(3y)</span></li>
+    <li>AVR <span class="exp">(2y)</span></li>
+    <li>Proteus <span class="exp">(2y)</span></li>
+    <li>MongoDB <span class="exp">(1y)</span></li>
+    <li>PyBind <span class="exp">(1y)</span></li>
+    <li>OpenMP <span class="exp">(1y)</span></li>
+    <li>Matlab <span class="exp">(1y)</span></li>
+    <li>Alive2 <span class="exp">(7m)</span></li>
+    <li>PyTorch <span class="exp">(6m)</span></li>
+    <li>Rapid Miner <span class="exp">(6m)</span></li>
+    <li>Altium Designer <span class="exp">(8m)</span></li>
+    <li>NetworkX <span class="exp">(6m)</span></li>
+    <li>LLVM <span class="exp">(6m)</span></li>
+  </div> -->
+
+  <!-- بخش دوم -->
+  <!-- <h4>Tools</h4>
+  <div class="badges fixed-badges">
+    <li>Git <span class="exp">(9y)</span></li>
+    <li>Linux <span class="exp">(7y)</span></li>
+    <li>SQL Server <span class="exp">(3y)</span></li>
+    <li>LaTeX <span class="exp">(3y)</span></li>
+  </div>
+</article> -->
+<article id="about-skills" class="section-card">
+  <header class="section-head">
+    <h3 class="section-title">Skills</h3>
+    <span class="title-bar"></span>
+  </header>
+
+  <div class="skills-two-cols">
+    <!-- ستون Programming -->
+    <div class="skills-col">
+      <h4>Programming Languages, Libraries & Frameworks</h4>
+      <ul class="badges fixed-badges">
+        <li>Python <strong class="exp">(4y)</strong></li>
+        <li>C++ <strong class="exp">(4y)</strong></li>
+        <li>NumPy <strong class="exp">(3y)</strong></li>
+        <li>Pandas <strong class="exp">(3y)</strong></li>
+        <li>SQL <strong class="exp">(3y)</strong></li>
+        <li>AngularJS <strong class="exp">(3y)</strong></li>
+        <li>NodeJS <strong class="exp">(3y)</strong></li>
+        <li>AVR <strong class="exp">(2y)</strong></li>
+        <li>Proteus <strong class="exp">(2y)</strong></li>
+        <li>MongoDB <strong class="exp">(1y)</strong></li>
+        <li>PyBind <strong class="exp">(1y)</strong></li>
+        <li>OpenMP <strong class="exp">(1y)</strong></li>
+        <li>MatLab <strong class="exp">(1y)</strong></li>
+        <li>Altium Designer <strong class="exp">(8m)</strong></li>
+        <li>Alive2 <strong class="exp">(7m)</strong></li>
+        <li>PyTorch <strong class="exp">(6m)</strong></li>
+        <li>Rapid Miner <strong class="exp">(6m)</strong></li>
+        <li>NetworkX <strong class="exp">(6m)</strong></li>
+      </ul>
+    </div>
+
+    <!-- ستون Tools -->
+    <div class="skills-col">
+      <h4>Tools</h4>
+      <ul class="badges fixed-badges">
+        <li>Git <strong class="exp">(9y)</strong></li>
+        <li>Linux <strong class="exp">(7y)</strong></li>
+        <li>SQL Server <strong class="exp">(3y)</strong></li>
+        <li>LaTeX <strong class="exp">(3y)</strong></li>
+         <li>LLVM <strong class="exp">(7m)</strong></li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+    <div class="divider"></div>
+    <article id="about-courses" class="section-card">
+  <header class="section-head">
+    <h3 class="section-title">Selected Courses (out of 20 )</h3>
+    <span class="title-bar"></span>
+  </header>
+  <ul class="list-vertical courses-list">
+    <li>
+        Machine Learning 
+        <p><strong>(20)</strong></p>
+    </li>
+    <li>
+      Advanced Theory of Computation 
+     <strong>(18.5)</strong>
+    </li>
+    <li>
+      Machine Learning with Graphs 
+        <p><strong>(18.5)</strong></p>
+    </li>
+    <li>
+      Probability and Statistics 
+        <p><strong>(18.5)</strong></p>
+    </li>
+    <li>
+      Computational Data Mining 
+        <p><strong>(17)</strong></p>
+    </li>
+    <li>
+      Software Engineering 1 
+       <p><strong>(16.8)</strong></p>
+    </li>
+    <li>
+      Software Engineering 2 
+        <p><strong>(19)</strong></p>
+    </li>
+    <li>
+       Computational Complexity 
+       <p><strong>(17.25)</strong></p>
+    </li>
+    <li>
+      Image Processing 
+        <p><strong>(19.5)</strong></p>
+    </li>
+    <li>
+      Data Mining 
+        <p><strong>(19.2)</strong></p>
+    </li>
+    <li>
+      Combinatorics 
+      <p><strong>(18.25)</strong></p>
+    </li>
+    <li>
+      Microprocessors 
+      <p><strong>(16.76)</strong></p>
+    </li>
+  </ul>
+</article>
+
+
+    <div class="divider"></div>
+
+    <!-- 7) کورس‌های آنلاین -->
+
+    <div class="divider"></div>
+
+    <!-- 8) زبان‌ها و علایق -->
+    <article id="about-lang-hobby" class="section-card">
+      <header class="section-head">
+        <h3 class="section-title">Languages & Hobbies</h3>
+        <span class="title-bar"></span>
+      </header>
+      <div class="about-grid">
+
+        <!-- Languages (بدون تغییر نسبت به قبلِ تو) -->
+<ul class="languages-list">
+  <li>
+    <span class="lang-badge native">Persian</span>
+    <span class="lang-level">Native</span>
+  </li>
+  <li>
+    <span class="lang-badge c2">English</span>
+    <span class="lang-level">C2</span>
+  </li>
+  <li>
+    <span class="lang-badge b1">German</span>
+    <span class="lang-level">B1</span>
+  </li>
+</ul>
+
+<!-- Hobbies به‌صورت badge پاستیلی و آیکون رنگی -->
+<ul class="hobbies-list">
+  <li>
+    <span class="hobby-badge study">
+      Studying psychology & philosophy
+      <i class="fas fa-book" style="color:#ff9800;"></i>
+      <i class="fas fa-brain" style="color:hsl(340,49%,67%);"></i>
+    </span>
+  </li>
+  <li>
+    <span class="hobby-badge singing">
+      Singing
+      <i class="fas fa-music" style="color:#e91e63;"></i>
+      <i class="fas fa-microphone" style="color:#2196f3;"></i>
+    </span>
+  </li>
+  <li>
+    <span class="hobby-badge badminton">
+      Badminton 🏸
+    </span>
+  </li>
+</ul>
+
+    </article>
+  </div>
+</section>
+
+  <section id="projects" class="tab">
+      <h2>Selected Projects</h2>
+      <div class="project-grid">
+
+    
+        <!-- 🔬 Project 2 -->
+      <div class="project-card" onclick="openModal('proj2')">
+        <img src="images/Program.jpg" alt="Program Synthesis & Verification in Compilation">
+        <h3>Program Synthesis & Verification in Compilation</h3>
+      </div>
+
+
+      <div class="project-card" onclick="openModal('proj1')">
+        <img src="images/spmv.jpeg" alt="Optimizing SpMV">
+        <h3> <i class="fas fa-paperclip" style="color:#e91e63; margin-right:6px;"></i>Optimizing Sparse Matrix-Vector Multiplication</h3>
+      </div>
+    
+        <!-- 📊 Project 3 -->
+
+      <div class="project-card" onclick="openModal('proj3')">
+        <img src="images/RNN.jpeg" alt="RNN Queries on Road Networks">
+        <h3>Reverse Nearest Neighbor Search on Road Networks</h3>
+      </div>
+
+    
+        <!-- 🤖 Project 4 -->
+
+      <div class="project-card" onclick="openModal('proj4')">
+        <img src="images/MST Forest.png" alt="Approximation Algorithm for Graph Clustering">
+        <h3>Approximation Algorithm for Graph Clustering</h3>
+      </div>
+
+      <!-- <div class="project-card" onclick="openModal('proj5')">
+      <img src="images/Feature Interaction- Recommender systems.png" alt="Deep & Cross Network with AutoField for Recommender Systems">
+      <h3>Deep & Cross Network with AutoField</h3>
+      </div> -->
+
+
+      <div class="project-card" onclick="openModal('proj6')">
+        <img src="images/link prediction-movielense.png" alt="Link Prediction on MovieLens Dataset">
+        <h3> <i class="fas fa-paperclip" style="color:#e91e63; margin-right:6px;"></i>Link Prediction on MovieLens</h3>
+      </div>
+
+
+      <div class="project-card" onclick="openModal('proj7')">
+        <img src="images/Computational DM.png" alt="Computational Data Mining Course Projects">
+        <h3>Computational Data Mining Projects</h3>
+      </div>
+
+
+      <div class="project-card" onclick="openModal('proj8')">
+        <img src="images/covid-19-illustration.png" alt="COVID-19 Fake News Detection">
+        <h3><i class="fas fa-paperclip" style="color:#e91e63; margin-right:6px;"></i>COVID-19 Fake News Detection</h3>
+      </div>
+
+
+      <div class="project-card" onclick="openModal('proj9')">
+        <img src="images/CLA.png" alt="Computational Linear Algebra Projects">
+        <h3><i class="fas fa-paperclip" style="color:#e91e63; margin-right:6px;"></i>Computational Linear Algebra Projects</h3>
+      </div>
+
+      <div class="project-card" onclick="openModal('proj-carhorn')">
+        <img src="images/wristlet.png" alt="Carhorn Detection System">
+        <h3>
+          <i class="fas fa-paperclip" style="color:#e91e63; margin-right:6px;"></i>Carhorn Detection System for the Deaf
+        </h3>
+      </div>
+
+      <div class="project-card" onclick="openModal('proj-micro')">
+        <img src="images/AVR.jpg" alt="Microprocessor Course Projects">
+        <h3>
+          <i class="fas fa-paperclip" style="color:#e91e63; margin-right:6px;"></i>
+          Microprocessor Course Projects
+        </h3>
+      </div>
+
+
+     <div class="project-card" onclick="openModal('proj-game-theory')">
+      <img src="images/Game Theory.png" alt="Game Theory Projects">
+      <h3>
+        Game Theory Projects
+      </h3>
+    </div>
+
+      <div class="project-card" onclick="openModal('proj-experiences')">
+        <img src="images/Exp.png" alt="Experiences App (AngularJS/Ionic, NodeJS)">
+        <h3>
+            <i class="fas fa-paperclip" style="color:#e91e63; margin-right:6px;"></i>
+          Experience App
+        </h3>
+      </div>
+
+      <div class="project-card" onclick="openModal('proj-pingpong')">
+        <img src="images/PingPong.png" alt="PingPong Game (C++ / OpenGL on GPU)">
+        <h3>
+          <i class="fas fa-paperclip" style="color:#e91e63; margin-right:6px;"></i>
+          Ping-Pong Game (GPU)
+        </h3>
+      </div>
+
+      <div class="project-card" onclick="openModal('proj-timecalc')">
+        <img src="images/Time-Calculator.png" alt="Time Calculator App & Jalali Datepicker (Ionic)">
+        <h3>
+              <i class="fas fa-paperclip" style="color:#e91e63; margin-right:6px;"></i>
+          Time Calculator App & Persian Date-picker (Ionic)
+        </h3>
+      </div>
+
+
+      <div class="project-card" onclick="openModal('proj-watermark')">
+        <img src="images/Watermarking.png" alt="Watermarking Project (MATLAB)" >
+        <h3>
+          Watermarking
+        </h3>
+      </div>
+
+
+      <div class="project-card" onclick="openModal('proj-yelp')">
+        <img src="images/Yelp.png" alt="Sentiment Analysis on Yelp" style="width: 200px; height: 200px;">
+      </div>
+
+
+      <div class="project-card" onclick="openModal('proj-compiler')">
+        <img src="images/Compiler.png" alt="Simple Compiler Project" style="width: 200px; height: 200px;">
+        <h3>
+         Simple Compiler
+        </h3>
+      </div>
+
+
+      <div class="project-card" onclick="openModal('proj-stratego')">
+        <img src="images/stratego.jpeg" alt="Stratego Game Project" style="width: 200px; height: 200px;">
+        <h3>
+          Stratego Game Implementation
+        </h3>
+      </div>
+
+
+      <div class="project-card" onclick="openModal('proj-infinity-matrix')">
+        <img src="images/Infinity Matrix.png" alt="Infinity Matrices Project" style="width: 200px; height: 200px;">
+          <h3>
+          Operations on Infinity  Matrix
+        </h3>
+      </div>
+
+
+
+      </div>
+    </section>
+
+<div id="proj1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj1')">&times;</span>
+    <h2>Optimizing Sparse Matrix-Vector Multiplication</h2>
+     <p><strong>Timeline:</strong> Jun 2024</p>
+    <p><strong>Language:</strong> C++</p>
+    <p>
+      In this project, I implemented <strong>8 different methods</strong> for performing 
+      Sparse Matrix-Vector Multiplication (SpMV).  
+      The results were compared against a baseline implementation 
+      using the <strong>OpenMP parallelization library</strong> to accelerate the process.  
+    </p>
+    <p>
+      Detailed results and comparisons can be found in the project’s README file.
+    </p>
+    <a href="https://github.com/minaaaasftw/SPMV" target="_blank"><i class="fab fa-github" style="color:#333; margin-right:6px;"></i>
+View on GitHub</a>
+  </div>
+</div>
+
+
+
+  
+<div id="proj2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj2')">&times;</span>
+    <h2>Program Synthesis & Verification in the Compilation Process</h2>
+     <p><strong>Timeline:</strong> Jun 2024 - Dec 2024 </p>
+    <p><strong>Language:</strong> Python (for simulation/prototyping), <span><strong> Toolchain: </strong></span>LLVM, Alive2 </p>
+    <!-- <p><strong>Timeline:</strong> Jun 2024 – Dec 2024</p> -->
+    <p>
+      My research was on the implementation of methods that apply <strong>LLMs</strong> to generate
+      <em>equivalent optimized programs</em> in the compiler <strong>super-optimization</strong> pipeline.
+      The goal is to synthesize semantically-equivalent variants with improved performance and then
+      verify them.
+    </p>
+    <p>
+      Includes components for <em>program synthesis</em>, <em>equivalence checking/verification</em>,
+      and benchmarking within the compilation workflow.
+    </p>
+    <!-- لینک گیت‌لبت رو اینجا بذار -->
+    <!-- <a href="https://gitlab.com/your-link6" target="_blank">View on GitLab</a> -->
+  </div>
+</div>
+
+
+
+<!-- 🔍 Modal 7 -->
+<div id="proj3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj3')">&times;</span>
+    <h2>Designing an Algorithm for Reverse Nearest Neighbor Queries on Road Networks</h2>
+    <p><strong>Timeline:</strong> 2023 – 2024</p>
+    <p>
+      Designed an algorithm to compute <em>reverse nearest neighbors (RNN)</em> of a query point
+      over a road network, considering graph topology and distance metrics on weighted edges.
+    </p>
+    <p>
+      Focus areas include candidate pruning, efficient shortest-path estimation, and correctness
+      under dynamic updates.
+    </p>
+    <!-- اگر خواستی زبان/لینک رو اضافه کن -->
+    <!-- <p><strong>Language:</strong> C++ / Python</p> -->
+    <!-- <a href="https://gitlab.com/your-link7" target="_blank">View on GitLab</a> -->
+  </div>
+</div>
+
+
+
+<div id="proj4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj4')">&times;</span>
+    <h2>Designing an Approximation Algorithm for Graph Clustering</h2>
+    <p><strong>Timeline:</strong> 2023 – 2024</p>
+    <p>
+      Worked on the <em>NP-hardness proof</em> of the Minimum Spanning Forest problem in Euclidean Space.
+    </p>
+    <p>
+      Designed and analyzed a <strong>6-approximation algorithm</strong> for a special instance of the
+      Graph Clustering problem.
+    </p>
+    <!-- اگر لینک گیت‌لب داری اینجا بذار -->
+    <!-- <a href="https://gitlab.com/your-link8" target="_blank">View on GitLab</a> -->
+  </div>
+</div>
+
+
+
+
+<div id="proj6" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj6')">&times;</span>
+    <h2>Link Prediction on MovieLens Dataset </i> </h2>
+    <p><strong>Timeline:</strong> 2023</p>
+    <p>
+      Implemented a <strong>Graph Convolutional Network (GCN)</strong> and optimized
+      <strong>LightGCN</strong> parameters for the task of link prediction in the 
+      <em>MovieLens 100k dataset</em>.
+    </p>
+    <p>
+      The project focused on <strong>movie recommendation</strong> to users, 
+      where the model achieved an accuracy of <strong>0.82</strong>.
+    </p>
+    <p><strong>Language/Frameworks:</strong> Python, PyTorch Geometric</p>
+    <!-- اگر لینک داری -->
+    <a href="https://gitlab.com/omrani/Machine-learning-with-graphs/-/tree/main?ref_type=heads" target="_blank"><i class="fab fa-gitlab" style="color:#fc6d26; margin-right:6px;"></i> View on GitLab</a>
+  </div>
+</div>
+
+
+<div id="proj7" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj7')">&times;</span>
+    <h2>Computational Data Mining Course Projects</h2>
+    <p><strong>Timeline:</strong> 2022</p>
+    <ul class="bulleted-tight">
+      <li>Implemented <strong>preconditioner methods</strong> in solving unstable systems of linear equations.</li>
+      <li>Implemented <strong>high-dimensional tensor factorization</strong>.</li>
+      <li>Implemented <strong>Orthogonal Matrix Factorization</strong> in high dimensions.</li>
+      <li>Implemented different methods for computing <strong>Eigenvalues</strong> in high-dimensional symmetric matrices.</li>
+    </ul>
+    <p><strong>Language:</strong> Python, C++</p>
+  </div>
+</div>
+
+
+<div id="proj8" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj8')">&times;</span>
+    <h2>COVID-19 Fake News Detection</h2>
+    <p><strong>Timeline:</strong> 2021</p>
+    <p>
+      Designed and evaluated multiple classification models to identify <strong>fake news</strong> 
+      related to COVID-19.  
+      The project aimed to compare model performance and select the most reliable one for detecting misinformation.
+    </p>
+    <p><strong>Language/Frameworks:</strong> Python, Scikit-learn, NLP</p>
+    <!-- اگر لینک واقعی داری اینجا جایگزین کن -->
+    <a href="https://github.com/minaaaasftw/covid19-fake-news-detection" target="_blank"><i class="fab fa-github" style="color:#333; margin-right:6px;"></i>
+ View on GitHub</a>
+  </div>
+</div>
+
+
+<div id="proj9" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj9')">&times;</span>
+    <h2>
+      Computational Linear Algebra Projects
+    </h2>
+    <p><strong>Timeline:</strong> 2021</p>
+    <p>
+      Working on parallelizing ML algorithms using <strong>PyBind</strong> and <strong>OpenMP</strong>.
+    </p>
+      <a href="https://gitlab.com/omrani/computational-la" target="_blank"><i class="fab fa-gitlab" style="color:#fc6d26; margin-right:6px;"></i> View on GitLab</a>
+  </div>
+</div>
+
+<div id="proj-carhorn" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj-carhorn')">&times;</span>
+    <h2>Carhorn Detection System for the Deaf</h2>
+    <p><strong>Date:</strong> 2019 (B.Sc. Thesis)</p>
+    <p>
+      Optimized a Neural Network model on a self-collected dataset of <strong>2000 car horn samples</strong>,  
+      classifying them against other sounds and reaching a test accuracy of <strong>0.89</strong>.  
+      This project was a pre-implementation of a car horn diagnosing wristlet for the Deaf.
+    </p>
+    <p>
+        <p><strong>Language/Frameworks:</strong> Python,C, Tensorflow</p>
+      <a href="https://drive.google.com/file/d/1cuNyKF6W9PkkP-caJ5i5Z_wN2Z1U11zd/view" target="_blank">
+        <i class="fas fa-code" style="color:#333; margin-right:6px;"></i> Model Code
+      </a>
+      <br>
+      <a href="https://www.dropbox.com/scl/fo/2ni5h9px6sf48opg752ph/AJaw9vuYI8XPe-Lx_1xZqlY?rlkey=lapahyv2budvxrpon9o1spohu&e=1&st=y34e2j2m&dl=0" target="_blank">
+        <i class="fas fa-video" style="color:#0077b5; margin-right:6px;"></i> Project Video + Micro Code
+      </a>
+    </p>
+  </div>
+</div>
+
+<!-- 🔍 Modal: Microprocessor Course Projects -->
+<div id="proj-micro" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj-micro')">&times;</span>
+    <h2>Microprocessor Course Projects</h2>
+    <p><strong>Date:</strong> 2018</p>
+    <p>
+      I Designed a custom PCB board implementing <strong>4 microprocessor projects</strong> using  
+      <em>Proteus, CodeVision, and Altium Designer</em>.
+    </p>
+    <ul class="bulleted-tight">
+      <li>Calculator</li>
+      <li>Light Sensor</li>
+      <li>PWM</li>
+      <li>USART, LM35</li>
+    </ul>
+    <p>
+      Detailed explanations and images are available in the repository:  
+      <a href="https://gitlab.com/omrani/microprocessor" target="_blank">
+        <i class="fab fa-gitlab" style="color:#fc6d26; margin-right:6px;"></i> View on GitLab
+      </a>
+    </p>
+  </div>
+</div>
+
+
+<div id="proj-game-theory" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj-game-theory')">&times;</span>
+    <h2>Game Theory Based Projects</h2>
+    <h3>Resource Sharing System Using Algorithmic Game Theory</h3>
+    <p><strong>Date:</strong> Jul 2017 - Oct 2017</p>
+    </p>Language:</strong> Python</p>
+    <p>
+      Worked on the implementation of a <strong>resource sharing system between agents</strong>  
+      using an <em>auction algorithm</em> based on algorithmic game theory.
+    </p>
+
+    <hr>
+    <h3>Game-Theoretic Deception Mechanism for Security Management of Clouds</h3>
+    <p><strong>Date:</strong> Jul 2017 - Oct 2017</p>
+
+      Worked on Modeling the <strong>cloud security problem</strong> as a <em>Signaling Game</em> in game theory.
+  </div>
+</div>
+
+<!-- 🔍 Modal: Experiences App -->
+<div id="proj-experiences" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj-experiences')">&times;</span>
+
+    <h2>
+      Experience App
+    </h2>
+
+    <p><strong>Timeline:</strong> 2017 – 2018</p>
+    <p><strong>Stack:</strong> AngularJS, Ionic, Node.js</p>
+    <p>
+      Experience App is a mobile application I designed and developed for sharing personal experiences.
+      Users can register, write about their experiences with places/purchases, rate others’ posts,
+      and gain points based on received ratings.
+    </p>
+
+    <p style="margin-top:1rem;">
+      All <strong >screenshots, analysis docs, and source code </strong> are available on the repository:
+      <a href="https://gitlab.com/omrani/experience--project" target="_blank">
+        <i class="fab fa-gitlab" style="color:#fc6d26; margin-right:6px;"></i>Open on GitLab
+      </a>
+    </p>
+  </div>
+</div>
+
+<!-- 🔍 Modal: Ping-Pong GPU -->
+<div id="proj-pingpong" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj-pingpong')">&times;</span>
+    <h2>Ping-Pong Game (Low/High Speed Modes)</h2>
+    <p><strong>Language:</strong> C++</p>
+    <p><strong>Graphics:</strong> OpenGL (GPU-accelerated rendering)</p>
+    <p>
+      Implemented a classic <strong>Ping-Pong</strong> game with two modes in four versions:
+      <em>low-speed</em> and <em>high-speed</em>. Rendering and animations are handled on the GPU
+      via OpenGL.
+    </p>
+
+    <!-- لینک‌ها: جایگزین کن -->
+    <p style="margin-top:.6rem;">
+      <a href="https://gitlab.com/omrani/ping-pong-game" target="_blank">
+        <i class="fab fa-gitlab" style="color:#fc6d26; margin-right:6px;"></i> View on GitLab
+      </a>
+    </p>
+  </div>
+</div>
+
+
+<!-- 🔍 Modal: Time Calculator & Jalali Datepicker -->
+<div id="proj-timecalc" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj-timecalc')">&times;</span>
+
+    <h2>Time Calculator & Jalali Datepicker (Open Source)</h2>
+    <p class="edu-meta">Implemented during employment at 
+      <a href="https://www.kasraco.ir" target="_blank" title="Kasra Company">
+        Kasra Company <i class="fas fa-external-link-alt" style="font-size:.9rem; margin-left:4px;"></i>
+      </a>
+    </p>
+
+    <p><strong>Timeline:</strong> 2015 </p>
+    <p><strong>Stack:</strong> Ionic (AngularJS), (optional backend: Node.js)</p>
+    <p>
+      A mobile application capable of performing date arithmetic (+,-,/) on input dates.
+      Given a base date and an offset (years / months / days / hours), it computes the resulting date.
+      The logic was implemented for the <strong>Jalali (Persian) calendar</strong> and then extracted as a reusable
+      <strong>Ionic Datepicker</strong> component for use across apps.
+    </p>
+
+    <h3 style="margin-top:1rem;">Key Capabilities</h3>
+    <ul class="bulleted-tight">
+      <li>Date arithmetic: base date +,- <em>years / months / days / hours</em> → next date.</li>
+      <li>Jalali (Shamsi) calendar support with correct rollovers.</li>
+      <li>Reusable <strong>Ionic Datepicker</strong> component extracted from the app.</li>
+    </ul>
+
+    <h3 style="margin-top:1rem;">Open-Source Links</h3>
+    <p>
+      <!-- لینک‌های واقعی‌ت رو جایگزین کن -->
+      <a href="https://github.com/Loopersgroup/time-calculator-app" target="_blank" style="margin-right:14px;">
+           <i class="fab fa-github" style="color:#333; margin-right:6px;"></i> Time Calculator (Repo)
+      </a>
+      <a href="https://github.com/Loopersgroup/PersianIonicDatepicker" target="_blank">
+           <i class="fab fa-github" style="color:#333; margin-right:6px;"></i> Ionic Persian Date-picker (Repo)
+      </a>
+    </p>
+
+    <!-- اگه مخزن‌ها روی GitHub هستن، یکی از اینا رو استفاده کن -->
+    <!--
+    <p>
+      <a href="https://github.com/your-time-calculator" target="_blank" style="margin-right:14px;">
+        <i class="fab fa-github" style="color:#333; margin-right:6px;"></i> Time Calculator (Repo)
+      </a>
+      <a href="https://github.com/your-ionic-datepicker" target="_blank">
+        <i class="fab fa-github" style="color:#333; margin-right:6px;"></i> Ionic Jalali Datepicker (Repo)
+      </a>
+    </p>
+    -->
+  </div>
+</div>
+
+<!-- Modal: Watermarking Project -->
+<div id="proj-watermark" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj-watermark')">&times;</span>
+
+    <h2>Watermarking (MATLAB)</h2>
+    <p class="edu-meta"><strong>Year:</strong> 2018</p>
+    <p><strong>Language:</strong> MATLAB</p>
+
+    <h3 style="margin-top:1rem;">Description</h3>
+    <ul class="bulleted-tight">
+      <li>Implemented a watermarking technique embedding a message into an image after DCT (Discrete Cosine Transform) transformation.</li>
+      <li>Performed robustness testing by applying different JPEG compression qualities.</li>
+      <li>Successfully retrieved hidden messages even after lossy compression attacks.</li>
+    </ul>
+
+    <p>
+      <i class="fas fa-lightbulb" style="color:#fbc02d; margin-right:6px;"></i>
+      This project explored practical aspects of <strong>image processing, watermarking, and robustness against compression attacks</strong>.
+    </p>
+  </div>
+</div>
+
+
+<div id="proj-yelp" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj-yelp')">&times;</span>
+
+    <h2>Sentiment Analysis on Yelp</h2>
+    <p class="edu-meta"><strong>Year:</strong> 2018</p>
+    <p><strong>Language:</strong> Python</p>
+
+    <h3 style="margin-top:1rem;">Description</h3>
+    <ul class="bulleted-tight">
+      <li>Performed sentiment analysis on a dataset of user comments from the Yelp application.</li>
+      <li>Designed a classifier converting user reviews into a <strong>1–5 star rating scale</strong>.</li>
+      <li>Applied text preprocessing, feature extraction (TF-IDF, embeddings), and ML models for evaluation.</li>
+    </ul>
+
+    <p>
+      <i class="fas fa-lightbulb" style="color:#fbc02d; margin-right:6px;"></i>
+      This project combined <strong>Natural Language Processing (NLP)</strong> techniques with 
+      <strong>Machine Learning</strong> for real-world review classification.
+    </p>
+  </div>
+</div>
+
+
+<div id="proj-compiler" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj-compiler')">&times;</span>
+
+    <h2>Design and Implementation of a Simple Compiler</h2>
+    <p class="edu-meta"><strong>Year:</strong> 2016</p>
+    <p><strong>Languages / Tools:</strong> Lex, Yacc, C</p>
+
+    <h3 style="margin-top:1rem;">Description</h3>
+    <ul class="bulleted-tight">
+      <li>Designed and implemented a simple compiler using <strong>Lex</strong> (for lexical analysis) and <strong>Yacc</strong> (for parsing).</li>
+      <li>Built modules for <em>tokenization, parsing, and syntax tree construction</em>.</li>
+      <li>Implemented semantic checks and a basic code generation phase.</li>
+    </ul>
+
+    <p>
+      <i class="fas fa-lightbulb" style="color:#fbc02d; margin-right:6px;"></i>
+      This project helped me gain practical experience in <strong>compiler design</strong>, 
+      <strong>formal grammars</strong>, and <strong>language parsing techniques</strong>.
+    </p>
+  </div>
+</div>
+
+
+<div id="proj-stratego" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj-stratego')">&times;</span>
+
+    <h2>Stratego Game</h2>
+    <p class="edu-meta"><strong>Language:</strong> C++</p>
+
+    <h3 style="margin-top:1rem;">Description</h3>
+    <ul class="bulleted-tight">
+      <li>Implemented the classic board game <strong>Stratego</strong> in C++.</li>
+      <li>Designed the game board, movement rules, and piece hierarchy.</li>
+      <li>Used MinMax tree for strategy design</li>
+
+    </ul>
+
+    <p>
+      <i class="fas fa-chess" style="color:#4cafef; margin-right:6px;"></i>
+      This project strengthened my skills in <strong>game logic design</strong>, 
+      <strong>object-oriented programming</strong>, and <strong>rule-based systems</strong>.
+    </p>
+  </div>
+</div>
+
+
+<div id="proj-infinity-matrix" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj-infinity-matrix')">&times;</span>
+
+    <h2>Implementing 4 Operations on Infinity Matrices</h2>
+    <p class="edu-meta"><strong>Language:</strong> C++</p>
+    <p class="edu-meta"><strong>Year:</strong> 2014</p>
+
+    <h3 style="margin-top:1rem;">Description</h3>
+    <ul class="bulleted-tight">
+      <li>Designed a data structure using <strong>Doubly Linked List</strong> to represent infinity matrices efficiently.</li>
+      <li>Implemented 4 main matrix operations (Addition, Subtraction, Multiplication, and Transpose).</li>
+      <li>Focused on memory efficiency and dynamic allocation for potentially very large matrices.</li>
+    </ul>
+
+    <p>
+      <i class="fas fa-th" style="color:#9c27b0; margin-right:6px;"></i>
+      This project was an important step in learning about <strong>data structures</strong>, 
+      <strong>dynamic memory management</strong>, and <strong>matrix operations in C++</strong>.
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+          
+        <section id="publications" class="tab">
+            <h2>Publications</h2>
+            <ul>
+                <li>
+                    <strong>
+                        Multivariate Gaussian Bayes classifier with limited data for segmentation of clean and contaminated regions in the small bowel capsule endoscopy images
+                    </strong><br>
+                    <em>PLOS ONE</em>, vol. 20, no. 3, pp. 1–22, Published: March 7, 2025<br>
+                    <a href="https://doi.org/10.1371/journal.pone.0315638" target="_blank">DOI: 10.1371/journal.pone.0315638</a><br>
+                    Authors: Vahid Sadeghi, Alireza Mehridehnavi, Maryam Behdad, Alireza Vard, <strong><u>Mina Omrani</u></strong>, Mohsen Sharifi, Yasaman Sanahmadi, Niloufar Teyfouri<br>
+                    <details>
+                        <summary>Abstract</summary>
+                        <p>
+                            A considerable amount of undesirable factors in the wireless capsule endoscopy (WCE) procedure hinder the proper visualization of the small bowel and take gastroenterologists more time to review.
+                            Objective quantitative assessment of different bowel preparation paradigms and saving the physician reviewing time motivated us to present an automatic low-cost statistical model for automatically segmenting
+                            of clean and contaminated regions in the WCE images. The results from the SEE-AI project dataset and CECleanliness database proved that the proposed scheme has good adaptability.
+                        </p>
+                    </details>
+                </li>
+                <li>
+                    <strong>
+                        Real‑time small bowel visualization quality assessment in wireless capsule endoscopy images using different lightweight embeddable models
+                    </strong><br>
+                    <em>International Journal of Imaging Systems and Technology</em>, vol. 34, no. 3, 2024<br>
+                    <a href="https://doi.org/10.1002/ima.23069" target="_blank">DOI: 10.1002/ima.23069</a><br>
+                    Authors: Vahid Sadeghi, Alireza Mehridehnavi, Yasaman Sanahmadi, Sajed Rakhshani, <strong><u>Mina Omrani</u></strong>, Mohsen Sharifi<br>
+                    <details>
+                        <summary>Abstract</summary>
+                        <p>
+                            We propose automated real‑time small bowel visualization quality (SBVQ) assessment to eliminate transmission of irrelevant frames.
+                            Lightweight color‑based models (KNN, MLP, GBM, LR) were trained on the Kvasir Capsule dataset, achieving accuracy ≈0.87, DSC≈0.87, IOU≈0.80;
+                            logistic regression had the shortest inference time. Generalization confirmed on SEE‑AI dataset; models are compact and suitable for WCE integration.
+                        </p>
+                    </details>
+                </li>
+            </ul>
+        </section>
+        
+        
+        
         <section id="contact" class="tab">
-            <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-        </section>
+            <h2>Contact Me</h2>
+            <p>If you have any questions or want to collaborate on a project, I’d like to hear from you!</p>
+            <p>You can reach me at either of the emails below:</p>
+          
+            <ul class="contact-list">
+              <li>
+                <img src="gmail.png" class="gmail-icon" alt="Gmail Icon">
+                <a href="mailto:omranimina135@gmail.com">omranimina13@gmail.com</a>
+              </li>
+              <li>
+                <img src="umail.png" class="email-icon" alt="AUT Icon">
+                <a href="mailto:mina.omrani@aut.ac.ir">mina.omrani@aut.ac.ir</a>
+              </li>
+            </ul>
+          </section>
+          
+          
     </main>
 
     <script src="script.js"></script>

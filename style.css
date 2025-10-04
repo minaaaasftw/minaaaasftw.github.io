@@ -57,3 +57,801 @@ main {
     height: auto;
     border-radius: 4px;
 }
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.header-pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.header-right {
+    flex-shrink: 0;
+}
+
+.header-big-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.header-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.site-title {
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+nav button {
+    margin: 0.3rem;
+    padding: 0.5rem 1rem;
+    background: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background: #666;
+}
+
+/* ظرف مرکزی و عنوان about */
+.about-wrap { max-width: 980px; margin: 0 auto; }
+.about-title { margin: 0 0 1rem; text-align: left; }
+
+/* نوار فهرست داخلی */
+.about-subnav {
+  display: flex; flex-wrap: wrap; gap: .4rem .6rem;
+  background: #fff; border: 1px solid #eee; border-radius: 12px;
+  padding: .6rem .8rem; margin-bottom: 1rem; justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+}
+.about-subnav a {
+  display: inline-block; padding: .35rem .7rem; border-radius: 999px;
+  background: #f2f4f7; color: #333; text-decoration: none; font-size: .92rem;
+  transition: transform .1s ease, background .2s ease;
+}
+.about-subnav a:hover { background: #e8ebef; transform: translateY(-1px); }
+
+
+
+
+
+/* کارت بخش + نوار تزیینی */
+.section-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+.section-card + .section-card { margin-top: 1rem; }
+
+/* سربرگ کارت و نوار عنوان */
+.section-head { display: flex; align-items: center; justify-content: space-between; gap: .8rem; margin-bottom: .6rem; }
+.section-title { margin: 0; font-size: 1.15rem; color: #222; }
+.title-bar {
+  display: inline-block; flex-shrink: 0;
+  width: 64px; height: 4px; border-radius: 999px;
+  background: linear-gradient(90deg, #00a0ff, #7c4dff);
+}
+
+/* نوار جداکننده بین کارت‌ها */
+.divider {
+  height: 10px; margin: .9rem auto;
+  background:
+    linear-gradient(90deg, rgba(0,160,255,.15), rgba(124,77,255,.15));
+  border-radius: 999px;
+  max-width: 860px;
+}
+
+/* فهرست‌ها */
+.list-vertical { margin: .2rem 0 0; padding-left: 1.1rem; }
+.list-compact { margin: .2rem 0 0; padding-left: 1.1rem; }
+.list-compact li { margin: .15rem 0; }
+.bulleted-tight { margin: .25rem 0 0; padding-left: 1.1rem; }
+.bulleted-tight li { margin: .2rem 0; }
+
+/* دو ستونه برای کورس‌ها */
+.two-cols { columns: 2 280px; column-gap: 24px; }
+
+/* مهارت‌ها به‌صورت Badge */
+.skills-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .9rem;
+}
+.badges { list-style: none; padding: 0; margin: .4rem 0 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.badges li {
+  background: #f7f9fc; border: 1px solid #e7eaf0; border-radius: 999px;
+  padding: .28rem .7rem; font-size: .9rem;
+}
+
+/* گرید زبان/علاقه */
+.about-grid { display: grid; gap: 1rem; }
+@media (min-width: 720px) { .about-grid { grid-template-columns: 1fr 1fr; } }
+
+/* تایم‌لاین تحصیلات */
+.timeline { list-style: none; padding: 0; margin: .3rem 0 0; position: relative; }
+
+.timeline-item { position: relative; display: grid; grid-template-columns: 28px 1fr; gap: .6rem; margin: .8rem 0; }
+
+/* .timeline-item .dot {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: linear-gradient(135deg, #00a0ff, #7c4dff);
+  box-shadow: 0 0 0 4px #fff, 0 2px 8px rgba(0,0,0,.15);
+  position: relative; top: 2px;
+} */
+.timeline-item .content {
+  background: #fff; border: 1px solid #f0f0f0; border-radius: 12px;
+  padding: .7rem .8rem; box-shadow: 0 3px 10px rgba(0,0,0,.04);
+}
+
+.timeline-item .dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00a0ff, #7c4dff); /* همون خوشگله */
+  box-shadow: 0 0 0 3px #fff, 0 2px 6px rgba(0,0,0,0.15);
+  position: relative;
+  left: 12px;  /* نصف خط + نصف قطر = وسط چین میشه */
+  top: 6px;    /* کمی پایین بیاد تا وسط خط بیفته */
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: .3rem 0 0;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr; /* جا برای نقطه */
+  gap: .6rem;
+  margin: 1.5rem 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 20px;   /* دقیقا وسط نقطه */
+  top: 20px;    /* از زیر نقطه شروع بشه */
+  bottom: -20px; /* تا آیتم بعدی */
+  border-left: 2px dashed #bbb; /* خط‌چین ملایم */
+  z-index: 0;
+}
+
+/* حذف خط برای آخرین آیتم */
+.timeline-item:last-child::before {
+  content: none;
+}
+
+
+/* نقطه */
+.timeline-item .dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00a0ff, #7c4dff);
+  box-shadow: 0 0 0 3px #fff, 0 2px 6px rgba(0,0,0,0.15);
+  position: relative;
+  left: 12px;
+  top: 4px;
+  z-index: 1;
+}
+
+
+.edu-row { display: flex; align-items: center; justify-content: space-between; gap: .8rem; }
+.edu-meta { color: #666; font-size: .9rem; white-space: nowrap; }
+.edu-project { margin: .35rem 0 .2rem; }
+
+
+/* اسکرول نرم برای لینک‌های داخلی */
+html { scroll-behavior: smooth; } 
+
+
+/* تیترهای هر بخش (h3) */
+.section-head {
+  background: transparent !important;   /* هیچ پس‌زمینه‌ای نداشته باشه */
+  box-shadow: none !important;          /* سایه سیاه هم حذف بشه */
+  border: none !important;              /* کادر تیره هم نباشه */
+}
+
+
+
+.section-title {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700; /* ضخیم‌تر */
+  background: linear-gradient(180deg, #111111, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  /* سایه ظریف برای بُعد */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+}
+
+/* نوار باریک زیر تیتر */
+.title-bar {
+  display: inline-block;
+  width: 60px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #000000, #ffffff);
+}
+
+/* جداکننده بین کارت‌ها */
+.divider {
+  height: 6px;
+  margin: .8rem auto;
+  background: linear-gradient(90deg, rgba(0,0,0,0.15), rgba(255,255,255,0.15));
+  border-radius: 999px;
+  max-width: 860px;
+}
+
+
+header { position: relative; }        /* برای قرارگیری مطلق بوم */
+#bg-graph {
+  position: absolute;
+  inset: 0;                           /* تمام سطح هدر */
+  width: 100%;
+  height: 100%;
+  z-index: 0;                         /* پشت محتوای هدر */
+  pointer-events: none;               /* کلیک‌ها به عناصر هدر برسند */
+}
+.header-container, .social-icons, nav { position: relative; z-index: 1; }
+
+
+/* حالت پایه: آیکون‌ها سفید، خط زیر آیکون شفاف */
+.social-icons a {
+  margin: 0 14px;
+  text-decoration: none;
+}
+
+/* رنگ و ترنزیشن را به خود <i> بده تا هاور از بین نرود */
+.social-icons a i {
+  color: #ffffff;
+  font-size: 1.4rem;   /* قبلاً 1.8rem بود */
+  display: inline-block;
+  transition: color .25s ease, transform .25s ease;
+}
+
+.social-icons a:hover i {
+  transform: scale(1.2); /* هاور همچنان بزرگ‌تر می‌شه */
+}
+
+
+/* رنگ برند در هاور (Specificity بالاتر به کمک [title] و i) */
+.social-icons a[title="LinkedIn"]:hover i       { color: #0077b5 !important; }
+.social-icons a[title="GitLab"]:hover i         { color: #fc6d26 !important; }
+.social-icons a[title="Google Scholar"]:hover i { color: #4285f4 !important; }
+
+
+/* .timeline-item .dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #555;            /* خاکستری تیره، طبیعی‌تر */
+  /* border: 2px solid #fff;      /* دور سفید برای تمیز دیده شدن */
+  /* box-shadow: 0 1px 3px rgba(0,0,0,0.25); /* سایه ظریف */
+  /* position: relative;
+  /* top: 2px;
+} */
+
+.subtext {
+  font-size: 0.9rem;   /* کوچیک‌تر */
+  color: #666;         /* خاکستری ملایم */
+  font-style: italic;  /* ایتالیک اگه بخوای */
+}
+
+
+/* prev */
+
+#publications ul { list-style-type: square; padding-left: 1.5rem; }
+#publications li { margin-bottom: 1.5rem; line-height: 1.6; }
+details summary { cursor: pointer; color: #444; font-weight: bold; margin-top: 0.5rem; }
+details p { margin-top: 0.5rem; line-height: 1.5; }
+.name-and-quote { display: flex; flex-direction: column; align-items: flex-start; }
+.site-quote { font-size: 0.9rem; font-style: italic; color: #ccc; margin-top: 0.2rem; line-height: 1.4; }
+.quote-author { font-size: 0.8rem; font-style: normal; color: #aaa; } 
+.project-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; } 
+.project-card { width: 200px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.2); cursor: pointer; text-align: center; background-color: white; transition: transform 0.2s ease; } 
+.project-card:hover { transform: scale(1.03); } .project-card img { width: 100%; height: 130px; object-fit: cover; } 
+.modal { display: none; position: fixed; z-index: 99; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); } 
+.modal-content { background: white; margin: 10% auto; padding: 1rem 2rem; border-radius: 10px; width: 90%; max-width: 600px; position: relative; animation: fadeIn 0.3s ease-in-out; } 
+.modal-content a { color: #007bff; font-weight: bold; } 
+.close { position: absolute; top: 8px; right: 12px; font-size: 24px; cursor: pointer; color: #333; } @keyframes fadeIn { from {opacity: 0; transform: scale(0.95);} to {opacity: 1; transform: scale(1);} } 
+.contact-list { list-style-type: none; padding: 0; margin-top: 1rem; } 
+.contact-list li { margin-bottom: 0.7rem; font-size: 1rem; } 
+.contact-list a { color: #007bff; text-decoration: none; } 
+.contact-list a:hover { text-decoration: underline; } 
+.email-icon { width: 24px; height: 24px; } 
+.gmail-icon { width: 24px; height: 24px; }
+
+
+.hobbies-list {
+  list-style: disc;   /* بولت دایره‌ای برمی‌گرده */
+  padding-left: 1.2rem; /* کمی فاصله از چپ مثل بقیه */
+}
+
+
+.hobbies-list i {
+  margin-left: 6px;       /* فاصله بین متن و آیکون */
+  font-size: 1.1rem;
+  vertical-align: middle; /* وسط‌چین با متن */
+}
+
+.languages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.languages-list li {
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lang-badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* رنگ‌های مخصوص زبان‌ها */
+.lang-badge.native { background: linear-gradient(135deg, #009688, #4caf50); }  /* Persian */
+.lang-badge.c2     { background: linear-gradient(135deg, #3f51b5, #2196f3); }  /* English */
+.lang-badge.b1     { background: linear-gradient(135deg, #ff9800, #ff5722); }  /* German */
+
+.lang-level {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ساختار کلی */
+.hobbies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hobbies-list li {
+  margin-bottom: 0.6rem;
+}
+
+/* استایل badge برای Hobbies */
+.hobby-badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* رنگ‌های متفاوت برای هر Hobby */
+.hobby-badge.study {
+  background: linear-gradient(135deg, #ff9800, #e91e63); /* کتاب + مغز */
+}
+
+.hobby-badge.singing {
+  background: linear-gradient(135deg, #e91e63, #2196f3); /* موسیقی + میکروفون */
+}
+
+.hobby-badge.badminton {
+  background: linear-gradient(135deg, #4caf50, #2e7d32); /* سبز برای بدمینتون */
+}
+
+/* آیکون‌ها سفید بشن */
+.hobby-badge i {
+  margin-left: 4px;
+  color: #fff;
+}
+
+/* ساختار کلی */
+.hobbies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hobbies-list li {
+  margin-bottom: 0.6rem;
+}
+
+/* استایل badge برای Hobbies */
+.hobby-badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* رنگ‌های متفاوت برای هر Hobby */
+.hobby-badge.study {
+  background: linear-gradient(135deg, #ff9800, #e91e63); /* کتاب + مغز */
+}
+
+.hobby-badge.singing {
+  background: linear-gradient(135deg, #e91e63, #2196f3); /* موسیقی + میکروفون */
+}
+
+.hobby-badge.badminton {
+  background: linear-gradient(135deg, #4caf50, #2e7d32); /* سبز برای بدمینتون */
+}
+
+/* ساختار کلی */
+.hobbies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hobbies-list li {
+  margin-bottom: 0.6rem;
+}
+
+/* استایل badge برای Hobbies */
+.hobby-badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* رنگ‌های متفاوت برای هر Hobby */
+.hobby-badge.study {
+  background: linear-gradient(135deg, #ff9800, #e91e63); /* کتاب + مغز */
+}
+
+.hobby-badge.singing {
+  background: linear-gradient(135deg, #e91e63, #2196f3); /* موسیقی + میکروفون */
+}
+
+.hobby-badge.badminton {
+  background: linear-gradient(135deg, #4caf50, #2e7d32); /* سبز برای بدمینتون */
+}
+
+/* ========== Languages (badge) با رنگ پرچم ========== */
+.languages-list { list-style: none; margin: 0; padding: 0; }
+.languages-list li { display: flex; align-items: center; gap: .6rem; margin-bottom: .6rem; }
+
+.lang-badge {
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
+  padding: .32rem .7rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: .9rem;
+  color: #111;               /* متن تیره تا روی گرادیان‌های روشن خوانا باشد */
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+
+/* Persian — پرچم ایران: سبز → سفید → قرمز (خیلی ملایم) */
+.lang-badge.native {
+  background: linear-gradient(90deg, #c9f2d0, #ffffff, #ffd1d1);
+}
+
+/* English — UK/English: آبی/سفید/قرمز ملایم */
+.lang-badge.c2 {
+  background: linear-gradient(90deg, #d6e6ff, #ffffff 40%, #ffd6db 85%);
+}
+
+/* German — سیاه/قرمز/زرد را ملایم می‌کنیم تا پاستیلی شود */
+.lang-badge.b1 {
+  background: linear-gradient(90deg, #e3e3e3, #ffd9de 55%, #fff3b8 95%);
+}
+
+.lang-level { font-size: .9rem; color: #666; }
+
+/* ========== Hobbies (badge) پاستیلی با آیکون رنگی ========== */
+.hobbies-list { list-style: none; margin: 0; padding: 0; }
+.hobbies-list li { margin-bottom: .6rem; }
+
+.hobby-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .32rem .7rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .9rem;
+  color: #222;                           /* متن تیره */
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  backdrop-filter: saturate(110%);
+}
+
+/* مطالعه (کتاب + مغز) – پاستیلی نارنجی/صورتی خیلی نرم */
+.hobby-badge.study {
+  background: linear-gradient(135deg, #ffe7c4, #ffd7e4);
+}
+
+/* آواز – پاستیلی صورتی/آبی خیلی نرم */
+.hobby-badge.singing {
+  background: linear-gradient(135deg, #ffd9e6, #d9eaff);
+}
+
+/* بدمینتون – پاستیلی سبز */
+.hobby-badge.badminton {
+  background: linear-gradient(135deg, #daf5d8, #eefbe9);
+}
+
+/* آیکون‌ها: دیگر سفیدشان نکن! رنگ خودشان قابل‌دیدن باشد */
+.hobby-badge i {
+  font-size: 1.05rem;
+  margin-left: .1rem;
+  /* رنگ آیکون را از HTML inline یا کلاس‌های جدا تعیین می‌کنی */
+}
+
+#about-intro p {
+  margin: 0 0 0.8rem;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.edu-logo {
+  height: 24px;       /* اندازه مناسب */
+  margin-right: 8px;  /* فاصله بین لوگو و متن */
+  vertical-align: middle;
+}
+
+
+.edu-logo.aut {   /* برای Amirkabir */
+  height: 30px;   /* بزرگ‌ترش کن */
+}
+/* ===== University Courses: 1→2→3 ستونه ===== */
+/* ===== University Courses: Responsive Grid ===== */
+.courses-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;   /* موبایل: تک‌ستونه */
+  gap: 10px;
+}
+
+@media (min-width: 700px) {
+  .courses-list { grid-template-columns: repeat(2, 1fr); } /* تبلت */
+}
+@media (min-width: 1024px) {
+  .courses-list { grid-template-columns: repeat(3, 1fr); } /* دسکتاپ */
+}
+
+.courses-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  padding: .5rem .75rem;
+  background: #ffffff;
+  background: #f7f9fc;
+  border: 1px solid #e7eaf0;
+  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  min-height: 46px;
+
+  /* یک خطی کردن */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.badges li {
+  background: #f7f9fc;
+  border: 1px solid #e7eaf0;
+  border-radius: 999px;
+  padding: .35rem .75rem;
+  font-size: .9rem;
+  min-width: 90px;        /* همه یه اندازه مینیمم */
+  text-align: center;
+  flex: 0 0 auto;         /* نذاره کش بیاد */
+}
+
+
+.badges.fixed-badges li {
+  background: #f7f9fc;
+  border: 1px solid #e7eaf0;
+  border-radius: 8px;
+  padding: .4rem .6rem;
+  font-size: 0.85rem;
+  width: 160px;        /* 👈 همه badge ها یه اندازه ثابت */
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.badges.fixed-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.exp {
+  color: #6a9fb5;      /* رنگ پاستیلی برای مدت تجربه */
+  font-size: 0.8rem;
+  margin-left: 4px;
+}
+
+
+.skills-block {
+  margin-bottom: 1rem;
+}
+
+.skills-block h4 {
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+
+
+/* سطری کردن Skills */
+.badges.fixed-badges {
+  display: flex;
+  flex-wrap: wrap;      /* اجازه بده تو خط بعدی هم برن */
+  gap: .6rem;
+  justify-content: flex-start; /* از سمت چپ بچسبه */
+}
+
+.badges.fixed-badges li {
+  background: #f7f9fc;
+  border: 1px solid #e7eaf0;
+  border-radius: 8px;
+  padding: .4rem .6rem;
+  font-size: 0.85rem;
+  min-width: 140px;     /* 👈 همه یک اندازه معقول */
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+
+
+.skills-two-cols {
+  display: grid;
+  grid-template-columns: 2fr 1fr;  /* 👈 ستون چپ بزرگ‌تر */
+  gap: 1.5rem;
+}
+
+.skills-col h4 {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.badges.fixed-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.badges.fixed-badges li {
+  background: #f7f9fc;
+  border: 1px solid #e7eaf0;
+  border-radius: 8px;
+  padding: .4rem .6rem;
+  font-size: 0.85rem;
+  width: 160px;       /* 👈 یکنواخت برای همه */
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.exp {
+  color: #6a9fb5;   /* آبی پاستیلی */
+  font-size: 0.85rem;
+  margin-left: 4px;
+}
+
+
+
+/* ✅ Projects as FLEX + عمودیِ تضمینی */
+#projects .project-grid {
+  display: flex !important;
+  flex-wrap: wrap;
+  column-gap: 16px;  /* فاصله افقی */
+  row-gap: 16px;     /* فاصله عمودی (جایی که پشتیبانی ناقصه، از margin کارت کمک می‌گیریم) */
+  justify-content: center;
+}
+
+/* کارت با عرض ثابت ولی فاصله‌ی عمودی تضمینی با margin-bottom */
+#projects .project-card {
+  width: 220px;        /* می‌تونی همون 200px نگه داری */
+  margin: 0 0 16px 0;  /* fallback برای مرورگرهای بدقلق */
+  box-sizing: border-box;
+}
+
+
+.code-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.pinned-icon {
+  color: #fc6d26;   /* رنگ گیت‌لب (نارنجی) */
+  margin-right: 6px;
+  font-size: 1rem;
+  vertical-align: middle;
+}
